@@ -16,6 +16,8 @@ public class RetailController {
 	
 	@Autowired
 	private RetailService service;
+	
+	@PostMapping("/bill")
 	public Map<String, String> getProductCost(@RequestBody List<Product> product){
 		Map<String,String>  response = new HashMap<String, String>();
 		if(product==null || product.isEmpty()){
